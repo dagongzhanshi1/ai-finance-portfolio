@@ -6,13 +6,13 @@
 -- =============================================
 
 -- 1. 查所有股票
-SELECT ALL FROM stocks;
+SELECT ALL * FROM stocks;
 
 -- 2. 只查市盈率低于 20 的股票
-SELECT ALL FROM stocks WHERE pe_ratio < 20;
+SELECT ALL * FROM stocks WHERE pe_ratio < 20;
 
 -- 3. 按市值从高到低排
-SELECT ALL FROM stocks ORDER BY market_cap DESC;
+SELECT ALL * FROM stocks ORDER BY market_cap DESC;
 
 -- 4. 只看股票代码、名称和市盈率
 SELECT code, name, pe_ratio FROM stocks;
@@ -23,5 +23,5 @@ FROM stocks
 GROUP BY sector;
 
 -- 6. 市值超过 10000 亿的白酒股
-SELECT ALL FROM stocks
+SELECT ALL * FROM stocks
 WHERE market_cap > 10000 AND sector = '白酒';
